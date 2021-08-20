@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569473661969",
+    "project_id": "quotieum",
+    "storage_bucket": "quotieum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569473661969:android:3221f79a39fc495b1d85b0",
+        "android_client_info": {
+          "package_name": "com.tengtonghann.android.quotieum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569473661969-rpm4oa5168r11nps870p73qdc4qgoofa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYZP6F9VT5F93bPyy4o2pjAg_esXTLX2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569473661969-rpm4oa5168r11nps870p73qdc4qgoofa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
