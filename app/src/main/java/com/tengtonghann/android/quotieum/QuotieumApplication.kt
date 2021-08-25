@@ -17,3 +17,4 @@ class QuotieumApplication: Application() {
         super.onCreate()
     }
 }
+// performance, improvement
