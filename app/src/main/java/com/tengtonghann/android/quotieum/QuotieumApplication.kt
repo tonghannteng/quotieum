@@ -1,6 +1,7 @@
 package com.tengtonghann.android.quotieum
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
@@ -15,6 +16,6 @@ class QuotieumApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Stetho.initializeWithDefaults(this)
     }
 }
-// performance, improvement
