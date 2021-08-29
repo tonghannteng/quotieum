@@ -75,7 +75,11 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.37"
 
     // Paging 3
-    implementation "androidx.paging:paging-runtime-ktx:3.0.0"
+    implementation "androidx.paging:paging-runtime-ktx:3.0.1"
+
+    // Debug network call and database - Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
 
     // Unit Test
     testImplementation 'junit:junit:4.13.2'

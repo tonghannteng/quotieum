@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../quotieum/app/src/main/res/drawable-v24/ic_copy.xml" value="0.19791666666666666" />
         <entry key="../quotieum/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21197916666666666" />
+        <entry key="../quotieum/app/src/main/res/drawable/ic_copy.xml" value="0.19791666666666666" />
         <entry key="../quotieum/app/src/main/res/drawable/ic_favourite_quote_empty.xml" value="0.21197916666666666" />
         <entry key="../quotieum/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21197916666666666" />
         <entry key="../quotieum/app/src/main/res/drawable/ic_quote_icon.xml" value="0.21197916666666666" />
+        <entry key="../quotieum/app/src/main/res/drawable/ic_quote_icon_reversed.xml" value="0.19791666666666666" />
+        <entry key="../quotieum/app/src/main/res/drawable/with_tint_background.xml" value="0.19791666666666666" />
         <entry key="../quotieum/app/src/main/res/layout/activity_main.xml" value="0.17980072463768115" />
         <entry key="../quotieum/app/src/main/res/layout/fragment_favorite.xml" value="0.15489130434782608" />
         <entry key="../quotieum/app/src/main/res/layout/fragment_quote.xml" value="0.15489130434782608" />
+        <entry key="../quotieum/app/src/main/res/layout/item_quote.xml" value="0.15489130434782608" />
         <entry key="../quotieum/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.19583333333333333" />
         <entry key="../quotieum/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21197916666666666" />
         <entry key="../quotieum/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19791666666666666" />
