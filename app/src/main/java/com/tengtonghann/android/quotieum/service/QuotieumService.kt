@@ -1,5 +1,6 @@
-package com.tengtonghann.android.quotieum.data
+package com.tengtonghann.android.quotieum.service
 
+import com.tengtonghann.android.quotieum.data.Quotes
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

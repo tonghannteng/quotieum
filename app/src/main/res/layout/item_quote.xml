@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_1"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/dark_blue">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/quoteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8"
+            android:contentDescription="@string/nothing"
+            android:src="@drawable/ic_quote_icon" />
+
+        <ImageView
+            android:id="@+id/savedQuoteEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dimen_8"
+            android:contentDescription="@string/nothing"
+            android:src="@drawable/ic_favourite_quote_empty" />
+
+        <ImageView
+            android:id="@+id/copyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:layout_toStartOf="@+id/savedQuoteEmpty"
+            android:background="@drawable/with_tint_background"
+            android:clickable="true"
+            android:contentDescription="@string/nothing"
+            android:focusable="true"
+            android:src="@drawable/ic_copy"
+            android:tintMode="src_in"
+            app:tint="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quoteIcon"
+            android:layout_marginStart="@dimen/dimen_8"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:fontFamily="serif-monospace"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:text="test text test text test text test text test text test text test text test text test text test text" />
+
+        <ImageView
+            android:id="@+id/quoteIconReversed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quoteText"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dimen_8"
+            android:contentDescription="@string/nothing"
+            android:src="@drawable/ic_quote_icon_reversed" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
