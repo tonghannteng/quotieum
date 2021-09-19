@@ -1,18 +1,15 @@
-package com.tengtonghann.android.quotieum.ui.quote
+package com.tengtonghann.android.quotieum.ui.favorite
 
 import androidx.recyclerview.widget.RecyclerView
 import com.tengtonghann.android.quotieum.data.Data
 import com.tengtonghann.android.quotieum.databinding.ItemQuoteBinding
 
-class QuotesViewHolder(
+class FavoriteViewHolder(
     private val binding: ItemQuoteBinding
 ) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(data: Data, onFavoriteQuote: (Data) -> Unit) {
+    fun bind(data: Data) {
         binding.apply {
             quoteText.text = data.quoteText
-            savedQuoteEmpty.setOnClickListener {
-                onFavoriteQuote(data)
-            }
         }
     }
 }

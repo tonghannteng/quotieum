@@ -1,8 +1,10 @@
 package com.tengtonghann.android.quotieum.di
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
+import com.tengtonghann.android.quotieum.data.QuoteRepository
+import com.tengtonghann.android.quotieum.data.QuoteRepositoryInterface
+import com.tengtonghann.android.quotieum.data.dao.QuoteDao
 import com.tengtonghann.android.quotieum.service.QuotieumService
-import com.tengtonghann.android.quotieum.ui.quote.QuoteRepository
-import com.tengtonghann.android.quotieum.ui.quote.QuoteRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,6 +31,7 @@ class QuotieumApiModule {
                 .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC))
                 .readTimeout(NETWORK_CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)
                 .writeTimeout(NETWORK_CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)
+                .addNetworkInterceptor(StethoInterceptor())
                 .build()
         )
         .addConverterFactory(GsonConverterFactory.create())
@@ -38,8 +41,9 @@ class QuotieumApiModule {
     @Singleton
     @Provides
     fun injectRepository(
-        quotieumService: QuotieumService
-    ) = QuoteRepository(quotieumService) as QuoteRepositoryImpl
+        quotieumService: QuotieumService,
+        quoteDao: QuoteDao
+    ) = QuoteRepository(quotieumService, quoteDao) as QuoteRepositoryInterface
 
     companion object {
         const val NETWORK_CALL_TIMEOUT = 60

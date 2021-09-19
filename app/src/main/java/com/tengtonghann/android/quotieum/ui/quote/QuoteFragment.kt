@@ -22,7 +22,11 @@ class QuoteFragment : Fragment(R.layout.fragment_quote) {
 
     private lateinit var binding: FragmentQuoteBinding
     private val quoteViewModel: QuoteViewModel by viewModels()
-    private val quoteAdapter = QuoteAdapter()
+    private val quoteAdapter = QuoteAdapter(
+        onFavoriteQuote = {
+            quoteViewModel.insertFavoriteQuote(data = it)
+        }
+    )
 
     companion object {
         const val TAG = "QuoteFragment"

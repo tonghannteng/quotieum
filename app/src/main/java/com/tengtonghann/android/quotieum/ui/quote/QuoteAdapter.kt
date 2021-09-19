@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import com.tengtonghann.android.quotieum.data.Data
 import com.tengtonghann.android.quotieum.databinding.ItemQuoteBinding
 
-class QuoteAdapter : PagingDataAdapter<Data, QuotesViewHolder>(QUOTE_COMPARATOR) {
+class QuoteAdapter(
+    val onFavoriteQuote: (Data) -> Unit
+) : PagingDataAdapter<Data, QuotesViewHolder>(QUOTE_COMPARATOR) {
 
     //to compare the data using diffUtil
     companion object {
@@ -26,7 +28,7 @@ class QuoteAdapter : PagingDataAdapter<Data, QuotesViewHolder>(QUOTE_COMPARATOR)
         val currentItem = getItem(position)
 
         if (currentItem != null) {
-            holder.bind(currentItem)
+            holder.bind(currentItem, onFavoriteQuote)
         }
     }
 

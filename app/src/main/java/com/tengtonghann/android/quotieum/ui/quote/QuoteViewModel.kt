@@ -8,6 +8,7 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.tengtonghann.android.quotieum.data.Data
+import com.tengtonghann.android.quotieum.data.QuoteRepositoryInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
@@ -18,7 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 @InternalCoroutinesApi
 @ExperimentalPagingApi
-class QuoteViewModel @Inject constructor(private val repository: QuoteRepositoryImpl) :
+class QuoteViewModel @Inject constructor(
+    private val repository: QuoteRepositoryInterface) :
     ViewModel(), CoroutineScope by MainScope() {
 
     private val _quoteList = MutableLiveData<PagingData<Data>>()
@@ -32,6 +34,12 @@ class QuoteViewModel @Inject constructor(private val repository: QuoteRepository
                 .collectLatest {
                     _quoteList.value = it
                 }
+        }
+    }
+
+    fun insertFavoriteQuote(data: Data) {
+        viewModelScope.launch {
+            repository.insertQuote(data)
         }
     }
 
