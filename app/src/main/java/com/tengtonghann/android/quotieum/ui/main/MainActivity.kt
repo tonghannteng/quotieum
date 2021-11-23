@@ -41,13 +41,13 @@ class MainActivity : AppCompatActivity() {
     @FlowPreview
     @ExperimentalCoroutinesApi
     private fun setUpNavigationObserver() {
-        mainViewModel.quoteNavigationLiveData.observe(this, {
+        mainViewModel.quoteNavigationLiveData.observe(this) {
             it.getIfNotHandled()?.run { showQuote() }
-        })
+        }
 
-        mainViewModel.favoriteNavigationLiveData.observe(this, {
+        mainViewModel.favoriteNavigationLiveData.observe(this) {
             it.getIfNotHandled()?.run { showFavorite() }
-        })
+        }
     }
 
     @ExperimentalCoroutinesApi

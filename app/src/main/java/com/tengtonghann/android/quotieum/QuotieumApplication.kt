@@ -12,7 +12,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @HiltAndroidApp
 @ExperimentalCoroutinesApi
-class QuotieumApplication: Application() {
+class QuotieumApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
